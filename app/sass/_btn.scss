@@ -1,0 +1,26 @@
+.btn{
+  margin: 0 auto;
+  width: 242px;
+  height: 52px;
+  border: 2px solid #ff931f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  @include circe-bold;
+  -webkit-transition: border-color .3s ease, color .3s ease;
+  transition: border-color .3s ease, color .3s ease;
+
+  &:hover{
+    border-color: #15b3c6;
+    color: #15b3c6;
+  }
+
+  &:active{
+    border-color: #129eaf;
+    color: #129eaf;
+  }
+
+}

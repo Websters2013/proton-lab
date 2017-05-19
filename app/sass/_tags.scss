@@ -1,0 +1,53 @@
+.tags {
+  position: relative;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 61px;
+  color: #fff;
+  @include circe-light;
+  font-size: 16px;
+
+  a{
+    padding: 7px 17px 6px;
+    margin: 0 1px 2px;
+    background-color: #eff2f5;
+    color: #000;
+    -webkit-transition: color .3s ease, background-color .3s ease;
+    transition: color .3s ease, background-color .3s ease;
+
+    &.active{
+      @include circe-bold;
+      color: #fff!important;
+      background-color: #15b3c6!important;
+      cursor: text;
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .tags{
+    padding: 0 70px;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .tags{
+
+    a{
+
+      &:hover{
+        background-color: #d9dee2;
+      }
+
+    }
+
+  }
+
+}

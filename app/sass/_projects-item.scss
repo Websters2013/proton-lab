@@ -1,0 +1,36 @@
+.projects-item {
+  max-width: 986px;
+  margin: 0 auto 45px;
+  padding: 6px 10px 85px;
+  border-bottom: 1px solid #d9d9d9;
+
+  &__aside{
+    max-width: 310px;
+    margin: 25px auto 0;
+    padding-top: 5px;
+  }
+
+  .article {
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+  .projects-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__aside{
+      width: 310px;
+      margin: 0 0 0 35px;
+    }
+
+    .article {
+      max-width: 596px;
+    }
+
+  }
+}

@@ -1,0 +1,43 @@
+//fonts
+@mixin circe-light() {
+  font-family: "circe-light", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin circe-regular() {
+  font-family: "circe-regular", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin circe-bold() {
+  font-family: "circe-bold", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin justify() {
+  text-align: justify;
+
+  &:after {
+    display: inline-block;
+    width: 100%;
+    content: '';
+  }
+}
+
+@mixin absoluteCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+}
+@mixin absoluteCenterX() {
+  position: absolute;
+  left: 50%;
+  transform: translateX( -50% );
+}
+@mixin absoluteCenterY() {
+  position: absolute;
+  top: 50%;
+  transform: translateY( -50% );
+}

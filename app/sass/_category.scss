@@ -1,0 +1,73 @@
+.category {
+  max-width: 966px;
+  margin: 73px auto 56px;
+  padding: 0 10px 6px;
+  border-bottom: 1px solid #15b3c6;
+  @include circe-bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &__link{
+    margin-right: 38px;
+    color: #15b3c6;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+
+    &.active{
+      color: #000;
+      cursor: default;
+    }
+
+  }
+
+  &__wrap{
+    position: relative;
+    -webkit-transition: height .3s ease;
+    transition: height .3s ease;
+  }
+
+  &__item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+
+    &.active{
+      opacity: 1;
+    }
+
+  }
+
+}
+
+@media (min-width: $phone-landscape) {
+
+  .category{
+
+    &__link{
+      margin-right: 38px;
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .category{
+    padding: 0 0 6px;
+
+    &__link{
+
+      &:hover {
+        color: #000;
+      }
+
+    }
+
+  }
+
+}

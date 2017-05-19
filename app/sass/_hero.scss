@@ -57,8 +57,8 @@
     h2{
       margin-bottom: 22px;
       @include circe-bold;
-      font-size: 38px;
-      line-height: 38px;
+      font-size: 26px;
+      line-height: 26px;
     }
 
     p{
@@ -127,6 +127,15 @@
 @media (min-width: $tablet-portrait) {
 
   .hero {
+
+    &__content{
+
+      h2{
+        font-size: 38px;
+        line-height: 38px;
+      }
+
+    }
 
     &__pagination {
       flex-direction: row;
