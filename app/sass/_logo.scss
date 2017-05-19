@@ -1,0 +1,19 @@
+.logo {
+  display: block;
+  max-width: 150px;
+  margin: 0 10px 13px 0;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+}
+
+@media (min-width: $phone-landscape) {
+
+  .logo{
+    margin-bottom: 0;
+  }
+
+}

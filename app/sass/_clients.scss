@@ -1,0 +1,59 @@
+.clients {
+  width: 100%;
+  max-width: 986px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  &__item{
+    margin-bottom: 50px;
+    color: #000;
+    @include circe-light;
+    font-size: 16px;
+    line-height: 23px;
+
+    h3{
+      margin-bottom: 4px;
+      @include circe-bold;
+      line-height: 19px;
+    }
+
+  }
+
+  &__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__content{
+    width: 100%;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .clients {
+
+    &__item{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 29px;
+    }
+
+    &__img{
+      width: 228px;
+      margin-bottom: 0;
+    }
+
+    &__content {
+      width: 556px;
+      margin-left: 18px;
+    }
+
+  }
+
+}

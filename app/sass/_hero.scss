@@ -1,0 +1,162 @@
+.hero {
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+
+  img{
+    display: block;
+    min-width: 100%;
+    margin: 0 auto;
+  }
+
+  &__link{
+    padding-right: 5px;
+    color: #fff;
+    font-size: 12px;
+    @include circe-bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+
+    svg{
+      position: relative;
+      top: -1px;
+      width: 11px;
+      height: 8px;
+      fill: #fff;
+      -webkit-transition: fill .3s ease;
+      transition: fill .3s ease;
+    }
+
+    &:hover{
+      color: #15b3c6;
+
+      svg{
+        fill: #15b3c6;
+      }
+
+    }
+
+  }
+
+  &__content{
+    position: absolute;
+    width: 90%;
+    top: calc( 50% - 12px );
+    left: 50%;
+    max-width: 674px;
+    @include circe-regular;
+    line-height: 23px;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    h2{
+      margin-bottom: 22px;
+      @include circe-bold;
+      font-size: 38px;
+      line-height: 38px;
+    }
+
+    p{
+      max-width: 474px;
+      margin: 0 auto 27px;
+    }
+
+  }
+
+  &__pagination{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
+    position: absolute;
+    bottom: 0!important;
+    left: 50%!important;
+    max-width: 966px;
+    background-color: rgba(79,91,101,.8);
+    @include circe-bold;
+    font-size: 16px;
+    line-height: 18px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 2;
+
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 0!important;
+      padding: 16px 15px 14px;
+      border-radius: 0;
+      background-color: transparent;
+      text-align: center;
+      opacity: 1;
+      -webkit-transition: background-color .3s ease, color .3s ease;
+      transition: background-color .3s ease, color .3s ease;
+
+      &.swiper-pagination-bullet-active{
+        background-color: #15b3c6;
+      }
+
+    }
+
+  }
+
+  &_inside{
+    max-height: 328px;
+    margin-bottom: 62px;
+
+    .hero__content{
+      top: calc( 50% + 14px )
+    }
+
+    .bread-crumbs{
+      margin: -10px 0 27px;
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .hero {
+
+    &__pagination {
+      flex-direction: row;
+
+      span{
+        height: 80px;
+        padding: 0 43px;
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .hero {
+
+    &__pagination{
+
+      span{
+        &:hover{
+          color: #15b3c6;
+        }
+
+      }
+
+    }
+
+  }
+
+}

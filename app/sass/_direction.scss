@@ -1,0 +1,57 @@
+.direction {
+  max-width: 986px;
+  margin: 0 auto;
+  padding: 6px 10px 0;
+
+  &__picture{
+    max-width: 310px;
+    margin-top: 25px;
+    padding-top: 5px;
+
+    img{
+      display: block;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  .article {
+    margin: 0;
+    padding: 0;
+
+    li{
+      margin: 0 0 0 10px;
+
+      &:before{
+        top: 10px;
+        left: -11px;
+        height: 3px;
+        width: 3px;
+        border-radius: 5px;
+        background-color: #000;
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+  .direction {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__picture{
+      width: 310px;
+      margin: 0 0 0 35px;
+    }
+
+    .article {
+      max-width: 596px;
+    }
+
+  }
+}

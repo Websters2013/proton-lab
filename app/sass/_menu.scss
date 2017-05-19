@@ -1,0 +1,171 @@
+.menu {
+  width: 100%;
+  @include circe-regular;
+  font-size: 16px;
+
+  li {
+    position: relative;
+
+    a{
+      display: block;
+      color: #fff;
+
+      &.active{
+        color: #15b3c6;
+        cursor: text;
+      }
+
+    }
+
+    ul{
+      display: none;
+      position: relative;
+      padding: 12px 0;
+      border-top: 1px solid #15b3c6;
+      white-space: nowrap;
+      font-size: 14px;
+      z-index: 2;
+
+      &:after {
+        bottom: 100%;
+        left: 10px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(21, 179, 198, 0);
+        border-bottom-color: #15b3c6;
+        border-width: 6px;
+      }
+
+      a {
+        padding: 10px 24px 11px 22px;
+      }
+
+    }
+
+  }
+
+  &__link{
+    padding: 9px 0 8px;
+  }
+
+  &__sub-frame{
+    display: none;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .menu {
+    width: auto;
+
+    > ul{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      > li{
+        padding: 0 14px;
+      }
+
+    }
+
+    li{
+
+      &:hover ul{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: transform .4s ease, opacity .3s ease .1s, visibility .3s ease .1s;
+        transition: transform .4s ease, opacity .3s ease .1s, visibility .3s ease .1s;
+      }
+
+      a{
+        color: #000;
+
+        &.active + ul{
+          display: none;
+        }
+
+      }
+
+      ul{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 16px;
+        background-color: #eff2f5;
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+        -webkit-transition: transform .3s ease .1s, opacity .3s ease, visibility .3s ease;
+        transition: transform .3s ease .1s, opacity .3s ease, visibility .3s ease;
+        opacity: 0;
+        visibility: hidden;
+
+        &:after{
+          display: none;
+        }
+
+      }
+
+      li a{
+        -webkit-transition: background-color .3s ease;
+        transition: background-color .3s ease;
+
+        &:hover{
+          background-color: #d9dee2;
+        }
+
+      }
+
+    }
+
+    &__link{
+      -webkit-transition: color .3s ease;
+      transition: color .3s ease;
+
+      &:hover{
+        color: #15b3c6
+      }
+
+    }
+
+    &__sub-frame{
+      display: block;
+      margin: 26px 0 -13px;
+      padding-top: 14px;
+      border-top: 1px solid #15b3c6;
+      width: 100%;
+      @include circe-light;
+      font-size: 16px;
+      line-height: 21px;
+      text-align: center;
+
+      a{
+        margin: 0 16px;
+        color: #000;
+        -webkit-transition: color .3s ease;
+        transition: color .3s ease;
+
+        &:hover{
+          color: #15b3c6
+        }
+
+        &.active{
+          color: #15b3c6;
+          cursor: text;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,38 @@
+.bread-crumbs {
+  @include circe-regular;
+  font-size: 14px;
+  color: #fff;
+  padding-right: 7px;
+  line-height: 14px;
+
+  a{
+    display: inline-block;
+    position: relative;
+    margin: 0 16px 10px 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    white-space: nowrap;
+    -webkit-transition: color .3s ease, border-bottom-color .3s ease;
+    transition: color .3s ease, border-bottom-color .3s ease;
+
+    &:after{
+      position: absolute;
+      top: 0;
+      left: calc( 100% + 9px );
+      color: #ff931f;
+      content: '›';
+    }
+
+    &:hover{
+      color: #15b3c6;
+      border-bottom-color: #15b3c6;
+    }
+
+  }
+
+  span{
+    margin-bottom: 10px;
+    white-space: nowrap;
+  }
+
+}

@@ -1,0 +1,62 @@
+.advantages {
+  position: relative;
+  max-width: 986px;
+  margin: 0 auto 46px;
+  padding: 0 calc( 50% - 412px) 58px calc( 50% - 402px);
+  @include circe-bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  &:after{
+    position: absolute;
+    top: 100%;
+    left: calc( 50% - 81px );
+    width: 162px;
+    height: 1px;
+    background-color: #000;
+    content: '';
+  }
+
+  &__item{
+    margin-bottom: 30px;
+    color: #000;
+  }
+
+  &__img{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 137px;
+    margin-bottom: 30px;
+
+    img{
+      display: block;
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .advantages {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 37px 46px 58px 39px;
+
+    &__item{
+      margin-bottom: 0;
+      -webkit-transition: color .3s ease;
+      transition: color .3s ease;
+
+      &:hover{
+        color: #15b3c6;
+      }
+
+    }
+
+  }
+
+}

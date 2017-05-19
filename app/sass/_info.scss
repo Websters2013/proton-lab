@@ -1,0 +1,60 @@
+.info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__mail{
+
+    svg{
+      width: 20px;
+      height: 15px;
+      stroke: #f08a1c;
+    }
+
+  }
+
+  &__phone{
+    margin: 3px 9px 0 0;
+    color: #000;
+    @include circe-bold;
+    font-size: 16px;
+    cursor: text;
+    white-space: nowrap;
+  }
+
+}
+
+@media (min-width: $phone-landscape) {
+
+  .info {
+    position: relative;
+    right: 70px;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .info {
+    right: 0;
+
+    &__phone{
+      margin: 0 9px -1px 0;
+    }
+
+    &__mail{
+
+      svg{
+        -webkit-transition: stroke .3s ease;
+        transition: stroke .3s ease;
+      }
+
+      &:hover svg{
+        stroke: #15b3c6;
+      }
+
+    }
+
+  }
+
+}

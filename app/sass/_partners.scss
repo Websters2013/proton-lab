@@ -1,0 +1,33 @@
+.partners {
+  display: flex;
+  width: 100%;
+  max-width: 994px;
+  margin: 0 auto 45px;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 228px;
+    height: 150px;
+    margin: 0 10px 17px;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+
+    &:hover{
+      background-color: #e7f7fa;
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .partners {
+    flex-flow: row wrap;
+    margin: 60px auto 45px;
+  }
+}
